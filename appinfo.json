@@ -10,7 +10,13 @@
     "longName": "Alang!",
     "projectType": "native",
     "resources": {
-        "media": []
+        "media": [
+            {
+                "file": "images/logo",
+                "name": "IMAGE_LOGO",
+                "type": "png"
+            }
+        ]
     },
     "sdkVersion": "3",
     "shortName": "Alang!",
