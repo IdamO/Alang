@@ -1,0 +1,26 @@
+{
+    "appKeys": {
+        "KEY_DICTATION": 0,
+        "KEY_DICTATION_RESP": 1
+    },
+    "capabilities": [
+        ""
+    ],
+    "companyName": "emmanuel.obiahu@gmail.com",
+    "longName": "Alang!",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "Alang!",
+    "targetPlatforms": [
+        "basalt",
+        "chalk"
+    ],
+    "uuid": "41d56db3-42f2-4cf5-a9d9-da9f354e7851",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
