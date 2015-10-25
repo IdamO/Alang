@@ -34,7 +34,6 @@ static void dictation_session_callback(DictationSession *session, DictationSessi
   if(status == DictationSessionStatusSuccess) {
     // Check this answer
     strncpy(s_last_text, transcription, sizeof(s_last_text));
-    text_layer_set_text(s_prompt_layer, "Hey what's up, hello?");
     check_answer();
   } else {
     APP_LOG(APP_LOG_LEVEL_ERROR, "Transcription failed.\n\nError ID:\n%d", (int)status);
