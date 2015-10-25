@@ -1,12 +1,12 @@
-var SERVER_IP = '10.121.39.133:8070';
+var SERVER_IP = 'alang.herokuapp.com';
 
 console.log('loaded Javascript!');
 
 function fetchCorrections(text) {
   var url = "http://" + SERVER_IP + "/api?sentence=" + encodeURIComponent(text);
   console.log("About to request:",  url);
-  req.open('GET', url);
   var req = new XMLHttpRequest();
+  req.open('GET', url);
   req.onload = function(e) {
     if (req.readyState == 4) {
       if(req.status == 200) {

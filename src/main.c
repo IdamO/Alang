@@ -34,6 +34,7 @@ static void dictation_session_callback(DictationSession *session, DictationSessi
   if(status == DictationSessionStatusSuccess) {
     // Check this answer
     strncpy(s_last_text, transcription, sizeof(s_last_text));
+    text_layer_set_text(s_prompt_layer, "Hey what's up, hello?");
     check_answer();
   } else {
     APP_LOG(APP_LOG_LEVEL_ERROR, "Transcription failed.\n\nError ID:\n%d", (int)status);
@@ -83,7 +84,7 @@ static void splash_window_load(Window *window) {
   layer_add_child(s_splash_layer, bitmap_layer_get_layer(s_logo_layer));
   
   // Start a timer to make the splash screen disappear
-  s_splash_timer = app_timer_register(1000, splash_timer_callback, NULL);
+  s_splash_timer = app_timer_register(1500, splash_timer_callback, NULL);
 }
 
 static void splash_window_unload(Window *window) {
