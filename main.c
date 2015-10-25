@@ -8,11 +8,24 @@ static char s_last_text[256];
 
 static bool s_speaking_enabled;
 
+// CString + key:
+static const uint32_t dictionaryKey = 0xabbababe;
+
 static void next_question_handler(void *context) {
     s_speaking_enabled = true;
 }
 
 static void check_answer() {
+  DictionaryIterator *iter;
+  app_message_outbox_begin(&iter);
+  
+  // Write the CString:
+  dict_write_cstring(iter, dictionaryKey, s_last_text);
+  // End:
+  // const uint32_t final_size = dict_write_end(iter);
+  
+    // Send the data!
+  app_message_outbox_send();
   app_timer_register(3000, next_question_handler, NULL);
   vibes_double_pulse();
 }
@@ -21,6 +34,7 @@ static void dictation_session_callback(DictationSession *session, DictationSessi
                                        char *transcription, void *context) {
   if(status == DictationSessionStatusSuccess) {
     // Check this answer
+    strncpy(s_last_text, transcription, sizeof(s_last_text));
     check_answer();
   } else {
     APP_LOG(APP_LOG_LEVEL_ERROR, "Transcription failed.\n\nError ID:\n%d", (int)status);
@@ -63,6 +77,7 @@ static void window_unload(Window *window) {
 }
 
 static void init() {
+  app_message_open(512, 512);
   s_main_window = window_create();
   window_set_click_config_provider(s_main_window, click_config_provider);
   window_set_window_handlers(s_main_window, (WindowHandlers) {
@@ -77,6 +92,8 @@ static void init() {
  
   window_set_background_color(s_main_window, GColorDarkCandyAppleRed);
   s_speaking_enabled = true;
+  
+ 
 }
 
 static void deinit() {
