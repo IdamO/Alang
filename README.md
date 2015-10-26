@@ -1,4 +1,7 @@
 # Alang
+
+![Alt text](https://cloud.githubusercontent.com/assets/13319677/9101774/ec1bd416-3bb8-11e5-8fd5-9aa87b4c9515.gif "Atari's Breakout")
+
 Inspired by fitness tracking bands, Alang is a language tracking tool that provides users who are living in a foreign environment a daily grammar mistake summary.
 
 Unlike typing which can give you immediate feedback, speaking cannot without someone in front of you. With Alang, all you need to do is go about your day speaking the language you are trying to learn. At the end of the day, you will get a summary about all the grammar mistakes that you made during the day.
