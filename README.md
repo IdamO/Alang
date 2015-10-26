@@ -1,6 +1,6 @@
 # Alang
 
-![Alt text](https://cloud.githubusercontent.com/assets/13319677/9101774/ec1bd416-3bb8-11e5-8fd5-9aa87b4c9515.gif "Atari's Breakout")
+![Alt text](https://cloud.githubusercontent.com/assets/13319677/10723591/4b3c813c-7b8a-11e5-9596-d229c8b29273.jpg "Come Alang™ with me :)")
 
 Inspired by fitness tracking bands, Alang is a language tracking tool that provides users who are living in a foreign environment a daily grammar mistake summary.
 
