@@ -14,7 +14,7 @@ The Pebble app uses Javascript to send the text to an API and receive correction
 The API updates its state in-memory (stretch goal: use Redis or some other persistence) and sends out updates to all connected web clients.
 
 ## Next steps
-Display corrections on-device as soon as they are received
-Use a database to store grammar suggestions
-Provide daily / monthly summaries and more helpful tips on mobile application
+* Display corrections on-device as soon as they are received
+* Use a database to store grammar suggestions
+* Provide daily / monthly summaries and more helpful tips on mobile application
 
