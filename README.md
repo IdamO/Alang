@@ -1,6 +1,6 @@
 # Alang
 
-![Alt text](http://i.imgur.com/OPr4Pjb.png "Carry me Alang™ with you :)")
+![Alt text](https://cloud.githubusercontent.com/assets/13319677/10723591/4b3c813c-7b8a-11e5-9596-d229c8b29273.jpg "Carry me Alang™ with you :)")
 
 ##Winner: "Most Innovative/Best Pebble Hack" - HackingEDU, CA
 Inspired by fitness tracking bands, Alang is a language tracking tool that provides users, who are living in a foreign environment, a daily grammar mistake summary.
